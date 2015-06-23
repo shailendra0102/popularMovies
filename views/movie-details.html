@@ -1,0 +1,26 @@
+<div class="container" style="margin:15px">
+<div class="row">
+	<div class="col-xs-4 col-lg-4">
+		<img src="http://image.tmdb.org/t/p/original{{movie.poster_path}}" width="100%" height="300px"/>
+	</div>
+	<div class="col-xs-8 col-lg-8">
+		<h1>{{movie.title}}</h1><span style="float:right;margin-top:-40px"><b>{{movie.release_date}}</b></span>
+		<p>{{movie.overview}}</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<h2>Available Trailers</h2>
+	</div>
+	<div class="col-xs-12">
+		
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12" ng-repeat="trailor in trailors">
+		<iframe id="ytplayer{{$index}}" type="text/html" width="100%" height="390" ng-src="{{ trailor.key | youtubeEmbedUrl }}"  frameborder="0"/>
+	</div>
+</div>
+
+
+</div>

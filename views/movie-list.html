@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6"></div>
+  	<div class="col-xs-4" style="text-align:right; margin:20px 0px">
+  		<input ng-model="q" id="search" class="form-control" placeholder="Movie title:YYYY-MM-DD">
+  	</div>
+  	<div class="col-xs-2" style="text-align:right; margin:20px 0px">
+  		<div class="btn-group" role="group" >
+		  <button type="button" class="btn btn-default" ng-class="{active:currentView=='grid'}"  ng-click="changeView('grid')">
+		  <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+		  </button>
+		  <button type="button" class="btn btn-default" ng-class="{active:currentView=='tile'}"  ng-click="changeView('tile')">
+		  <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+		  </button>
+  		</div>
+  	</div>
+  </div>
+  <div ui-view></div>
+  <div class="row">
+    <div class="col-xs-12" style="text-align:center">
+    	<dir-pagination-controls on-page-change="pageChangeHandler(newPageNumber)"></dir-pagination-controls>
+    </div>
+  </div>
+  
+</div>
+

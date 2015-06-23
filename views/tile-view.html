@@ -1,0 +1,8 @@
+<div class="wrap" >
+    <div class="box" dir-paginate="movie in movies |searchMovie:q| itemsPerPage: 10" current-page="currentPage">
+      <div class="boxInner">
+        <a href="#/details/{{movie.id}}"><img src="http://image.tmdb.org/t/p/w342{{movie.poster_path}}" width="200px" height="200px" /></a>
+        <div class="titleBox">{{movie.title}} </div>
+      </div>
+    </div>
+ </div>

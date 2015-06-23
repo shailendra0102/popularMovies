@@ -1,0 +1,14 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>MovieName</th>
+        <th>Release Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr dir-paginate="movie in movies |searchMovie:q |itemsPerPage: 8" current-page="currentPage">
+         <td><a href="javascript:void(0)" ng-click="load(movie.id)">{{movie.title}}</a></td>
+        <td>{{movie.release_date}}</td>
+      </tr>      
+    </tbody>
+  </table>
